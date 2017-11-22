@@ -136,7 +136,7 @@ Os trechos em vermelho serão movidos para dentro de uma nova função, como no 
 
 Acima criamos uma função nomeada ***configureExpress*** que terá a tarefa de configurar o *express* e retornar uma nova instância de aplicação configurada.
 
-A última etapa da nossa alteração é inicializar o banco antes da aplicação. Como o *moongose* retorna uma *Promise*, vamos esperar ela ser resolvida para então chamar a função que criamos anteriormente e que configura o *express*:
+A última etapa da nossa alteração é inicializar o banco antes da aplicação. Como o *mongoose* retorna uma *Promise*, vamos esperar ela ser resolvida para então chamar a função que criamos anteriormente e que configura o *express*:
 
 ```diff
 + export default () => database.connect().then(configureExpress);
